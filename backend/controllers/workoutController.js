@@ -63,7 +63,7 @@ const deleteWorkout = async (req, res) => {
         return res.status(404).json({error: 'No such workout exist with this id'})
     }
 
-    const workout = await Workout.findOneAndDelete({_id: id})
+    const workout = await goal.findOneAndDelete({_id: id})
 
     if(!workout){
         return res.status(400).json({error: 'No such workout'})
